@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chai-O-Holic Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #B6FFFA;
+        }
+        header {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        h1 {
+            font-size: 32px;
+        }
+        .menu-item {
+            margin: 10px;
+            padding: 15px;
+            display: flex;
+        }
+        .price {
+            margin-left: 300px;
+            font-size: 25px;
+        }
+        .inner {
+            width: 500px;
+            padding: 20px;
+            background-color: #B6FFFA;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item:hover {
+            box-shadow: 0px 7px 29px 0px black;
+        }
+        .add-to-cart-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 50px;
+        }
+        .cart-item-quantity {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .add-to-cart-button:hover {
+            background-color: #45a049;
+        }
+        .in {
+            height: 20px;
+            width: 50px;
+        }
+        #cart{
+            text-align: center;
+        }
+        .btn{
+            background:    black;
+border-radius: 11px;
+padding:       12px 19px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal bold 27px/1 "Open Sans", sans-serif;
+text-align:    center;
+text-decoration: none;
+        }
+        .btn1{
+            background:    black;
+border-radius: 11px;
+padding:       12px 19px;
+color:         #ffffff;
+display:       inline-block;
+font:          normal bold 27px/1 "Open Sans", sans-serif;
+text-align:    center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chai-O-Holic Menu</h1>
+    </header>
+
+    <div class="menu-item">
+        <div class="inner">
+            <h2>Classic Masala Chai</h2>
+            <p>A traditional blend of black tea, milk, and a secret mix of aromatic spices. Served hot or iced.</p>
+        </div>
+        <p class="price">Price: $3.50</p>
+        <label for="classic-quantity">Quantity:</label>
+        <input class="in" type="number" id="classic-quantity" value="1" min="1">
+        <button class="add-to-cart-button" onclick="addToCart('Classic Masala Chai', 3.50, 'classic-quantity')">Add to Cart</button>
+    </div>
+
+    <div class="menu-item">
+        <div class "inner">
+        <h2>Ginger Green Chai</h2>
+        <p>Refreshing green tea infused with ginger for a spicy twist. Served hot or iced.</p>
+    </div>
+        <p class="price">Price: $4.00</p>
+        <label for="ginger-quantity">Quantity:</label>
+        <input class="in" type="number" id="ginger-quantity" value="1" min="1">
+        <button class="add-to-cart-button" onclick="addToCart('Ginger Green Chai', 4.00, 'ginger-quantity')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <div class "inner">
+        <h2>Adarak Chai</h2>
+        <p>Refreshing green adarak infused with ginger for a spicy twist. Served hot or iced.</p>
+    </div>
+        <p class="price">Price: $4.00</p>
+        <label for="ginger-quantity">Quantity:</label>
+        <input class="in" type="number" id="ginger-quantity" value="1" min="1">
+        <button class="add-to-cart-button" onclick="addToCart('Ginger Green Chai', 4.00, 'ginger-quantity')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <div class "inner">
+        <h2>Ginger Green Chai</h2>
+        <p>Refreshing green tea infused with ginger for a spicy twist. Served hot or iced.</p>
+    </div>
+        <p class="price">Price: $4.00</p>
+        <label for="ginger-quantity">Quantity:</label>
+        <input class="in" type="number" id="ginger-quantity" value="1" min="1">
+        <button class="add-to-cart-button" onclick="addToCart('Ginger Green Chai', 4.00, 'ginger-quantity')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <div class "inner">
+        <h2>Ginger Green Chai</h2>
+        <p>Refreshing green tea infused with ginger for a spicy twist. Served hot or iced.</p>
+    </div>
+        <p class="price">Price: $4.00</p>
+        <label for="ginger-quantity">Quantity:</label>
+        <input class="in" type="number" id="ginger-quantity" value="1" min="1">
+        <button class="add-to-cart-button" onclick="addToCart('Ginger Green Chai', 4.00, 'ginger-quantity')">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+        <div class "inner">
+        <h2>Ginger Green Chai</h2>
+        <p>Refreshing green tea infused with ginger for a spicy twist. Served hot or iced.</p>
+    </div>
+        <p class="price">Price: $4.00</p>
+        <label for="ginger-quantity">Quantity:</label>
+        <input class="in" type="number" id="ginger-quantity" value="1" min="1">
+        <button class="add-to-cart-button" onclick="addToCart('Ginger Green Chai', 4.00, 'ginger-quantity')">Add to Cart</button>
+    </div>
+
+    <!-- Repeat the same pattern for other menu items -->
+
+
+    <div id="cart">
+        <a class="btn" href="cart.html">Cart</a>
+        <button class="btn1" id="clear-cart-button">Clear Cart</button>
+    </div>
+    
+    <script>
+        // Initialize an empty cart or retrieve it from local storage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+        function addToCart(itemName, itemPrice, quantityId) {
+            const quantityInput = document.getElementById(quantityId);
+            const selectedQuantity = parseInt(quantityInput.value, 10);
+    
+            cart.push({ name: itemName, price: itemPrice, quantity: selectedQuantity });
+            updateCartStorage();
+        }
+    
+        function updateCartStorage() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    
+        // Clear Cart Button Functionality
+        const clearCartButton = document.getElementById('clear-cart-button');
+        clearCartButton.addEventListener('click', () => {
+            // Clear the cart and update the local storage
+            cart = [];
+            updateCartStorage();
+    
+            // Reload the page to reflect the changes
+            location.reload();
+        });
+    </script>
+</body>
+</html>
